@@ -5,25 +5,57 @@ namespace CoffeeApp
 {
     class Program
     {
-        static void X()
-        {
-        }
-
         static void Main(string[] args)
         {
-            Car myBMW = new Car();
-            int theSpeed = myBMW.GetSpeed();
-            Console.WriteLine(theSpeed);
+            //CarMain();
 
-     
+            // Simple Types
+            //SimpleTypesMain();
 
-            myBMW.SetSpeed(30);
-            int newSpeed = myBMW.GetSpeed();
-            Console.WriteLine(newSpeed);
+            // if (bool) { } else if (bool2) {} else { }
 
-            myBMW.Color = "red";
-            string myBMWColor = myBMW.Color;
+            if (DateTime.Now.Year % 4 == 0)
+            {
+                Console.WriteLine("Leap Year");
+            }
 
+            //string greeting = DateTime.Now.Hour < 11 ? "GoodMorning" : "hello";
+
+            int x = 1;
+            switch (x)
+            {
+                case 1:
+                    Console.WriteLine(1);
+                    break;
+                default:
+                    Console.WriteLine(x);
+                    break;
+            }
+
+           
+
+
+            Foo("", 5, 6, 7);
+
+            int u = 9;
+            string h = "hello";
+            string s = $"{u}jkjflksdjfs {h} dfsdfsdf";
+
+            Console.WriteLine(s);
+
+            Console.ReadLine();
+        }
+
+        static void Foo(string s, params int[] ar)
+        {
+            foreach (var i in ar)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        private static void SimpleTypesMain()
+        {
             int x = 4;
             decimal y = x;
 
@@ -40,107 +72,54 @@ namespace CoffeeApp
             sb.Insert(0, "sdsds");
             string s = sb.ToString();
 
-            Console.ReadLine();
-        }
-    }
 
-    public class Car
-    {
-        private int speed;
-        public int GetSpeed()
+
+
+            //int i = 1;
+            //bool b = false;
+            //String s = "helo";
+            //string s1 = "firas";
+            //int ii = 0;
+
+            //var x = 8;
+
+            //StringBuilder sb = new StringBuilder();
+
+
+
+            //// int x = 8;
+
+            //DateTime dt = DateTime.Now;
+            //int thisYear = dt.Year;
+
+            //DateTime nextYearSameDay = dt.AddYears(1);
+            //int nextYear = nextYearSameDay.Year;
+
+            //int nextYear2 = dt.AddYears(1).Year;
+        }
+
+        private static void CarMain()
         {
-            return speed;
-        }
-        public void SetSpeed(int newSpeed)
-        {
-            if (newSpeed > 180) speed = 180;
-            speed = newSpeed;
-        }
+            Car myBMW = new Car();
+            int theSpeed = myBMW.GetSpeed();
+            Console.WriteLine(theSpeed);
 
-        //private string color;
-        //public string GetColor()
-        //{
-        //    return color;
-        //}
-        //public void SetColor(string vcolor)
-        //{
-        //    color = vcolor;
-        //}
+            myBMW.SetSpeed(30);
+            int newSpeed = myBMW.GetSpeed();
+            Console.WriteLine(newSpeed);
 
-        private string color;
-        public string Color
-        {
-            get { return color; }
-            set { color = value; }
+            //myBMW.Color = "red";
+            myBMW.Color = Color.Blue | Color.Red;
+            Color myBMWColor = myBMW.Color;
+            myBMW.Make = 2010;
+            Console.WriteLine(myBMW.Age());
+            myBMW.CarModel = Model.Sedan;
+
+            Model m = Model.Motorcycle;
+
         }
 
-        //private int make;
-        //public int Make
-        //{
-        //    get { return make; }
-        //    set { make = value; }
-        //}
 
-        public int Make { get; set; }
-
-        public int Age()
-        {
-            return DateTime.Now.Year - Make;
-        }
-
-        public int Age2
-        {
-            get
-            {
-                return DateTime.Now.Year - Make;
-            }
-        }
-    }
-
-    public class BankAccount
-    {
-        private decimal balance;
-
-        public void Deposit(decimal value)
-        {
-            balance += value;
-        }
-
-        public void Withdraw(decimal value)
-        {
-            balance -= value;
-        }
-
-        public decimal Balance
-        {
-            get
-            {
-                return balance;
-            }
-        }
     }
 }
 
-
-
-//int i = 1;
-//bool b = false;
-//String s = "helo";
-//string s1 = "firas";
-//int ii = 0;
-
-//var x = 8;
-
-//StringBuilder sb = new StringBuilder();
-
-
-
-//// int x = 8;
-
-//DateTime dt = DateTime.Now;
-//int thisYear = dt.Year;
-
-//DateTime nextYearSameDay = dt.AddYears(1);
-//int nextYear = nextYearSameDay.Year;
-
-//int nextYear2 = dt.AddYears(1).Year;
