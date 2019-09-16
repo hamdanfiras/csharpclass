@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeApp", "CoffeeApp\CoffeeApp.csproj", "{65E0745E-E8CF-4E24-8EA2-7D6EBC38CFF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeApp", "CoffeeApp\CoffeeApp.csproj", "{65E0745E-E8CF-4E24-8EA2-7D6EBC38CFF6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4BEC905-7B10-4761-BCF8-02D0413CB14F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppFoo", "ConsoleAppFoo\ConsoleAppFoo.csproj", "{73AC3A66-3F59-4A09-836D-5A196BFAF1C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class4", "Class4\Class4.csproj", "{87B7A21E-9F9B-4BFB-B752-21FB45C89DE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,14 @@ Global
 		{65E0745E-E8CF-4E24-8EA2-7D6EBC38CFF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65E0745E-E8CF-4E24-8EA2-7D6EBC38CFF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65E0745E-E8CF-4E24-8EA2-7D6EBC38CFF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73AC3A66-3F59-4A09-836D-5A196BFAF1C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73AC3A66-3F59-4A09-836D-5A196BFAF1C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73AC3A66-3F59-4A09-836D-5A196BFAF1C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73AC3A66-3F59-4A09-836D-5A196BFAF1C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87B7A21E-9F9B-4BFB-B752-21FB45C89DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87B7A21E-9F9B-4BFB-B752-21FB45C89DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87B7A21E-9F9B-4BFB-B752-21FB45C89DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87B7A21E-9F9B-4BFB-B752-21FB45C89DE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
