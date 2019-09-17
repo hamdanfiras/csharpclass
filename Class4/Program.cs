@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Specialized;
 
 namespace Class4
 {
@@ -7,7 +8,37 @@ namespace Class4
     {
         static void Main(string[] args)
         {
-            Banking();
+            ListDictionary dictionary = new ListDictionary();
+            dictionary.Add(10, "Adam");
+            dictionary.Add(20, "Georges");
+            dictionary.Add("Foo", "BAr");
+
+            if (dictionary["Foo"] is string)
+            {
+                string s = (string)dictionary["Foo"];
+                Console.WriteLine(s);
+            }
+
+            if (dictionary["Foo"] is string s1)
+            {
+                Console.WriteLine(s1);
+            }
+
+            object o = (string)dictionary["Foo"];
+
+            Queue q = new Queue();
+            q.Enqueue(2);
+            q.Enqueue("Hello");
+
+            int x = (int)q.Peek();
+            int y = (int)q.Dequeue();
+
+            Stack s = new Stack();
+            s.Push(6);
+            s.Push("djdjdj");
+
+            int x1 = (int)s.Pop();
+
 
             Console.ReadLine();
         }
@@ -84,7 +115,7 @@ namespace Class4
             {
                 grades[i] = (i + 1) * 10;
             }
-
+                
             foreach (var grade in grades)
             {
                 Console.WriteLine(grade);
@@ -98,4 +129,6 @@ namespace Class4
             Console.ReadLine();
         }
     }
+
+    
 }
