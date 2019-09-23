@@ -1,6 +1,8 @@
 ﻿using Class7.Banking.Core;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Class7.Banking.ConsoleApp
 {
@@ -8,6 +10,7 @@ namespace Class7.Banking.ConsoleApp
     {
         static void Main(string[] args)
         {
+            //BankAccount a = new BankAccount();
             List<BankAccount> accounts = new List<BankAccount>();
 
             BankAccount accountA = new CreditBankAccount("USD", -1000);
@@ -39,6 +42,13 @@ namespace Class7.Banking.ConsoleApp
                     if (int.TryParse(Console.ReadLine(), out int amount))
                     {
                         selectedAccount.Withdraw(amount);
+
+                        XmlSerializer serializer = new XmlSerializer(typeof(List<BankAccount>));
+                        TextWriter writer = new StreamWriter("c:\\test\\bankaccounts.xml");
+
+                        serializer.Serialize(writer, accounts);
+                        writer.Close();
+
                         Console.WriteLine("Account after withdraw: {0}", selectedAccount);
 
                     }
@@ -53,4 +63,6 @@ namespace Class7.Banking.ConsoleApp
 
         }
     }
+
+
 }

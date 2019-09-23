@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace Class7.Banking.Core
 {
-    public class BankAccount
+    [XmlInclude(typeof(CreditBankAccount))]
+    [XmlInclude(typeof(CurrentBankAccount))]
+
+    public abstract class BankAccount
     {
         private decimal _amount;
         private string _currency;
@@ -21,12 +25,21 @@ namespace Class7.Banking.Core
 
         public virtual void Withdraw(decimal amount)
         {
-            _amount -= amount;
+            if (ValidateWithdraw(amount))
+            {
+                _amount -= amount;
+            }
         }
+
+        protected abstract bool ValidateWithdraw(decimal amount);
+
 
         public decimal Amount => _amount;
 
-        public string Currency => _currency;
+
+        public string Currency { get { return _currency; } set { _currency = value; } }
+
+       
 
         public override string ToString()
         {
