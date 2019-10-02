@@ -18,9 +18,18 @@ namespace BookWorm8.Models
         {
             base.OnModelCreating(builder);
 
-            builder.Entity<AuthorBook>().HasKey(m2m => new { m2m.AuthorId, m2m.BookId });
-            builder.Entity<AuthorBook>().HasOne(m2m => m2m.Author).WithMany(o => o.Books).HasForeignKey(m2m => m2m.AuthorId);
-            builder.Entity<AuthorBook>().HasOne(m2m => m2m.Book).WithMany(o => o.Authors).HasForeignKey(m2m => m2m.BookId);
+            builder.Entity<AuthorBook>()
+                .HasKey(m2m => new { m2m.AuthorId, m2m.BookId });
+
+            builder.Entity<AuthorBook>()
+                .HasOne(m2m => m2m.Author)
+                .WithMany(o => o.Books)
+                .HasForeignKey(m2m => m2m.AuthorId);
+
+            builder.Entity<AuthorBook>()
+                .HasOne(m2m => m2m.Book)
+                .WithMany(o => o.Authors)
+                .HasForeignKey(m2m => m2m.BookId);
 
         }
 

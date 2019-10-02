@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class9", "Class9\Class9.csproj", "{2DD9FB4C-50C0-4FFF-9625-163EA487DE89}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BookWormService", "BookWormService\", "{FE411DD8-B220-4884-82D4-E139128F1DC1}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_55164"
+		Debug.AspNetCompiler.PhysicalPath = "BookWormService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55164\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_55164"
+		Release.AspNetCompiler.PhysicalPath = "BookWormService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55164\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "55164"
+		SlnRelativePath = "BookWormService\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookWormWebApp", "BookWormWebApp\BookWormWebApp.csproj", "{52B581E5-941D-40F8-9698-6A6D509F1EC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DD9FB4C-50C0-4FFF-9625-163EA487DE89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD9FB4C-50C0-4FFF-9625-163EA487DE89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD9FB4C-50C0-4FFF-9625-163EA487DE89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD9FB4C-50C0-4FFF-9625-163EA487DE89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE411DD8-B220-4884-82D4-E139128F1DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE411DD8-B220-4884-82D4-E139128F1DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE411DD8-B220-4884-82D4-E139128F1DC1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE411DD8-B220-4884-82D4-E139128F1DC1}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{52B581E5-941D-40F8-9698-6A6D509F1EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52B581E5-941D-40F8-9698-6A6D509F1EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52B581E5-941D-40F8-9698-6A6D509F1EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52B581E5-941D-40F8-9698-6A6D509F1EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAEC4CC5-8703-4AA5-9D9C-592294F916E5}
+	EndGlobalSection
+EndGlobal
