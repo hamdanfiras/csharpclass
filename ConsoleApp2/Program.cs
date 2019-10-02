@@ -19,11 +19,11 @@ namespace ConsoleApp2
             {
                 bool doNotTouch = false;
                 Type t = o.GetType();
-                
-                foreach  (HighSensitiveAttribute att 
+
+                foreach (HighSensitiveAttribute att
                     in t.GetCustomAttributes(typeof(HighSensitiveAttribute), false))
                 {
-                   if (!att.AllowJson)
+                    if (!att.AllowJson)
                     {
                         doNotTouch = true;
                     }
@@ -52,11 +52,11 @@ namespace ConsoleApp2
         public string Title { get; set; }
 
         [JsonIgnore]
-      
+
         public string Foo { get; set; }
     }
 
-    [HighSensitive(AllowJson =true)]
+    [HighSensitive(AllowJson = true)]
     public class Chapter
     {
         public int Id { get; set; }
@@ -64,9 +64,10 @@ namespace ConsoleApp2
         public string Title { get; set; }
 
     }
-
+    
+    [AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class)]
     public class HighSensitiveAttribute : Attribute
     {
-        public bool AllowJson { get; set; } 
+        public bool AllowJson { get; set; }
     }
 }
